@@ -4,8 +4,7 @@ class Main {
         fun main(args: Array<String>){
             val sjConverter = StrangeJapaneseConverter()
             //println(convert(args[0]))
-            println(sjConverter.convert("怪しい"))
+            println(sjConverter.convert("怪しい日本語"))
         }
-
     }
 }
