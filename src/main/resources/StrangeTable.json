@@ -1,5 +1,4 @@
 [
-<<<<<<< HEAD
     {
         "before": "し",
         "after": "レ"
@@ -19,18 +18,9 @@
     {
         "before": "ェ",
         "after": "卫"
+    },
+    {
+        "before": "う",
+        "after": "ラ"
     }
-,{
-"before": "う",
-"after": "ラ"
-}
 ]
-=======
-    {"before":"し", "after":"レ"},
-    {"before":"本", "after":"木"},
-    {"before":"語", "after":"语"},
-    {"before":"ジ", "after":"ヅ"},
-    {"before":"エ", "after":"卫"},
-    {"before":"ェ", "after":"卫"}
-]
->>>>>>> 3a11f432a76c41f295bd3380badc9ce3ddb95b3a
