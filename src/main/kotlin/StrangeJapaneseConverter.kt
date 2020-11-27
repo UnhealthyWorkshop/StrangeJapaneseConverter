@@ -1,9 +1,9 @@
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import java.io.File
 import java.io.IOException
-import java.lang.NullPointerException
+import kotlin.IllegalStateException
 
-class StrangeJapaneseConverter {
+class StrangeJapaneseConverter: Throwable() {
     private lateinit var rJson: String
     private var stMap: HashMap<String, String> = HashMap()
 
@@ -15,7 +15,7 @@ class StrangeJapaneseConverter {
         }
 
         jacksonObjectMapper().readValue(rJson, ArrayList<HashMap<String, String>>().javaClass)?.forEach { it ->
-            this.stMap[it["before"] ?: ""] = it["after"] ?: ""
+            this.stMap[it["before"] ?: throw IllegalStateException("不正なStrangeTable")] = it["after"] ?: throw IllegalStateException("不正なStrangeTable")
         }
 
     }
