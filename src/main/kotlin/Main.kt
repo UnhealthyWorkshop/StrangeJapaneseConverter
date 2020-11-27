@@ -1,7 +1,3 @@
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import java.io.File
-import java.io.IOException
-
 class Main {
     companion object {
         @JvmStatic

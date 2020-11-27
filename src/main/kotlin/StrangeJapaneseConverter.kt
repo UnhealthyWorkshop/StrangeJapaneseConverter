@@ -1,10 +1,11 @@
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import java.io.File
 import java.io.IOException
+import java.lang.NullPointerException
 
 class StrangeJapaneseConverter {
     private lateinit var rJson: String
-    private var stMap: HashMap<String, Any>
+    private var stMap: HashMap<String, String> = HashMap()
 
     init {
         try {
@@ -13,7 +14,9 @@ class StrangeJapaneseConverter {
             e.stackTrace
         }
 
-        this.stMap = jacksonObjectMapper().readValue(rJson, HashMap<String, Any>().javaClass)
+        jacksonObjectMapper().readValue(rJson, ArrayList<HashMap<String, String>>().javaClass)?.forEach { it ->
+            this.stMap[it["before"] ?: ""] = it["after"] ?: ""
+        }
 
     }
 
@@ -21,7 +24,7 @@ class StrangeJapaneseConverter {
         val buffer = StringBuffer()
 
         for (c in str) {
-            val match = stMap[c.toString()]
+            val match = this.stMap[c.toString()]
             if (match != null) {
                 buffer.append(match)
             } else {
