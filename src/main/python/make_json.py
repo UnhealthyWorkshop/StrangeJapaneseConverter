@@ -16,16 +16,17 @@ def write_json(path: Path, obj: dict) -> None:
         f.writelines(ls)
 
 def main():
-    path = Path.cwd()/"src/main/resources/StrangeTable.json"
-    s1, s2 = input("before_str after_str: ").split()
+    path = Path.cwd()/'src/main/resources/StrangeTable.json'
+    s1, s2 = input('before_str after_str: ').split()
+
+    if s1 == s2:
+        print('Err: 変換前文字列と変換後文字列が同一です．')
 
     if isinstance(s1, str) and isinstance(s2, str):
-        dict_obj = {"before":s1, "after":s2}
+        dict_obj = {'before':s1, 'after':s2}
         write_json(path, dict_obj)
         return
-    print("str str の形式で入力してください")
-    exit(0)
-
+    print('Err: 入力形式が不正です．str str の形式で入力してください')
 
 
 if __name__ == '__main__':
