@@ -27,7 +27,7 @@ class StrangeJapaneseConverter: Throwable() {
         }
 
         /*JSONのパース*/
-        jacksonObjectMapper().readValue(rJson, ArrayList<HashMap<String, String>>().javaClass)?.forEach {
+        jacksonObjectMapper().readValue(this.rJson, ArrayList<HashMap<String, String>>().javaClass)?.forEach {
             this.stMap[it["before"] ?: throw IllegalStateException("不正なStrangeTable")] = it["after"] ?: throw IllegalStateException("不正なStrangeTable")
         }
     }
@@ -43,7 +43,7 @@ class StrangeJapaneseConverter: Throwable() {
         val buffer = StringBuffer()
 
         str.toMutableList().forEach {
-            buffer.append(stMap[it.toString()] ?: it)
+            buffer.append(this.stMap[it.toString()] ?: it)
         }
 
         return buffer.toString()

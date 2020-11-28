@@ -22,5 +22,65 @@
     {
         "before": "う",
         "after": "ラ"
+    },
+    {
+        "before": "円",
+        "after": "日元"
+    },
+    {
+        "before": "個",
+        "after": "个"
+    },
+    {
+        "before": "メ",
+        "after": "乄"
+    },
+    {
+        "before": "リ",
+        "after": "刂"
+    },
+    {
+        "before": "売",
+        "after": "賣"
+    },
+    {
+        "before": "買",
+        "after": "买"
+    },
+    {
+        "before": "き",
+        "after": "ぎ"
+    },
+    {
+        "before": "た",
+        "after": "だ"
+    },
+    {
+        "before": "こ",
+        "after": "ご"
+    },
+    {
+        "before": "転",
+        "after": "轉"
+    },
+    {
+        "before": "す",
+        "after": "ず"
+    },
+    {
+        "before": "る",
+        "after": "ゑ"
+    },
+    {
+        "before": "貴",
+        "after": "贵"
+    },
+    {
+        "before": "購",
+        "after": "购"
+    },
+    {
+        "before": "なさい",
+        "after": "(しなさい)"
     }
 ]
