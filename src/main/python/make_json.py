@@ -19,13 +19,11 @@ def main():
     path = Path.cwd()/"src/main/resources/StrangeTable.json"
     s1, s2 = input("before_str after_str: ").split()
 
-    if isinstance(s1, str) and isinstance(s2, str):
-        dict_obj = {"before":s1, "after":s2}
-        write_json(path, dict_obj)
-        return
-    print("str str の形式で入力してください")
-    exit(0)
-
+    if (len(s1) == len(s2)) != 1:
+        print("str str の形式で入力してください")
+        exit(0)
+    dict_obj = {"before":s1, "after":s2}
+    write_json(path, dict_obj)
 
 
 if __name__ == '__main__':
