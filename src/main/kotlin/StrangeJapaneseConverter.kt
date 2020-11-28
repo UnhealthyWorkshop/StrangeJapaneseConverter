@@ -28,11 +28,7 @@ class StrangeJapaneseConverter: Throwable() {
 
         /*JSONのパース*/
         jacksonObjectMapper().readValue(rJson, ArrayList<HashMap<String, String>>().javaClass)?.forEach {
-            val isException = IllegalStateException("不正なStrangeTable")
-            val before = it["before"] ?: throw isException
-            val after = it["after"] ?: throw isException
-
-            this.stMap[before] = after
+            this.stMap[it["before"] ?: throw IllegalStateException("不正なStrangeTable")] = it["after"] ?: throw IllegalStateException("不正なStrangeTable")
         }
     }
 
