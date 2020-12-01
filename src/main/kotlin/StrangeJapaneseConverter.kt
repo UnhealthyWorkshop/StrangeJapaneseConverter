@@ -43,7 +43,7 @@ class StrangeJapaneseConverter: Throwable() {
         val buffer = StringBuffer()
 
         str.toMutableList().forEach {
-            buffer.append(stMap[it.toString()] ?: it)
+            buffer.append(this.stMap[it.toString()] ?: it)
         }
 
         return buffer.toString()
