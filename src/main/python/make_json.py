@@ -25,6 +25,7 @@ def main():
         print('Err: 変換前文字列と変換後文字列が同一です')
         return
 
+
     if isinstance(s1, str) and isinstance(s2, str):
         dict_obj = {'before': s1, 'after': s2}
         write_json(path, dict_obj)
